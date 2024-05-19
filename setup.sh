@@ -288,7 +288,7 @@ echo ""
 if [[ $host == "1" ]]; then
 echo -e "   \e[1;32mTolong Masukan Subdomain/Domain Anda $NC"
 read -p "   Domain/Subdomain: " host1
-echo "IP=" >> /var/lib/tt/ipvps.conf
+echo "IP=" >> /var/lib/ing/ipvps.conf
 echo $host1 > /etc/xray/domain
 echo $host1 > /root/domain
 echo ""
@@ -596,9 +596,9 @@ systemctl enable trip
 
 #SERVICE VMESS
 # // Installing UDP Mini
-mkdir -p /usr/local/tt/
-wget -q -O /usr/local/tt/udp-mini "${REPO}ssh/udp-mini"
-chmod +x /usr/local/tt/udp-mini
+mkdir -p /usr/local/ing/
+wget -q -O /usr/local/ing/udp-mini "${REPO}ssh/udp-mini"
+chmod +x /usr/local/ing/udp-mini
 wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}ssh/udp-mini-1.service"
 wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}ssh/udp-mini-2.service"
 wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}ssh/udp-mini-3.service"
