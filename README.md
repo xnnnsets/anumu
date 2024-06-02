@@ -1,12 +1,13 @@
 <img src="https://img.shields.io/badge/UPDATE%20VPS-SCRIPT"></img>
 ```
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sleep 5 && reboot
 ```
+<img src="https://img.shields.io/badge/SEBELUM%20LANJUT%20STEP%20KE%202%20TUNGGU%20KURANG%20LEBIH%201%20MENITAN-SCRIPT"></img>
 <img src="https://img.shields.io/badge/INSTALL-SCRIPT"></img>
 ```
-apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/xnnnsets/anumu/main/setup.sh && chmod +x setup.sh && ./setup.sh
+sudo apt install lolcat -y && sudo gem install lolcat && sudo wget -q https://raw.githubusercontent.com/xnnnsets/anumu/main/setup.sh && sudo chmod +x setup.sh && sudo ./setup.sh
 ```
 <img src="https://img.shields.io/badge/UPDATE%20SC-SCRIPT"></img>
 ```
-wget https://raw.githubusercontent.com/xnnnsets/anumu/main/update.sh && chmod +x update.sh && ./update.sh
+sudo wget https://raw.githubusercontent.com/xnnnsets/anumu/main/update.sh && sudo chmod +x update.sh && sudo ./update.sh
 ```
