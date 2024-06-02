@@ -17,7 +17,7 @@ rm -rf bot.zip
 clear
 wget https://raw.githubusercontent.com/xnnnsets/anumu/main/bot/ing.zip
 unzip ing.zip
-pip3 install -r kyt/requirements.txt
+pip3 install -r ing/requirements.txt
 
 #isi data
 echo ""
@@ -30,32 +30,32 @@ echo -e "${grenbo}[*] Info Id Telegram : @MissRose_bot , perintah /info${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -e -p "[*] Input your Bot Token : " bottoken
 read -e -p "[*] Input Your Id Telegram :" admin
-echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
-echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
-echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
-echo -e PUB='"'$PUB'"' >> /usr/bin/kyt/var.txt
-echo -e HOST='"'$NS'"' >> /usr/bin/kyt/var.txt
+echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/ing/var.txt
+echo -e ADMIN='"'$admin'"' >> /usr/bin/ing/var.txt
+echo -e DOMAIN='"'$domain'"' >> /usr/bin/ing/var.txt
+echo -e PUB='"'$PUB'"' >> /usr/bin/ing/var.txt
+echo -e HOST='"'$NS'"' >> /usr/bin/ing/var.txt
 clear
 
-cat > /etc/systemd/system/kyt.service << END
+cat > /etc/systemd/system/ing.service << END
 [Unit]
-Description=Simple kyt - @kyt
+Description=ANUMU
 After=network.target
 
 [Service]
 WorkingDirectory=/usr/bin
-ExecStart=/usr/bin/python3 -m kyt
+ExecStart=/usr/bin/python3 -m ing
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 END
 
-systemctl start kyt 
-systemctl enable kyt
-systemctl restart kyt
+systemctl start ing 
+systemctl enable ing
+systemctl restart ing
 cd /root
-rm -rf kyt.sh
+rm -rf bot.sh
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
