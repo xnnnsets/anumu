@@ -1,6 +1,6 @@
 <img src="https://img.shields.io/badge/UPDATE%20VPS-SCRIPT"></img>
 ```
-   apt update && apt upgrade -y
+apt update && apt upgrade -y
 ```
 <img src="https://img.shields.io/badge/INSTALL-SCRIPT"></img>
 ```
